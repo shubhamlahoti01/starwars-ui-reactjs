@@ -1,11 +1,13 @@
 import React from "react";
 import Menu from "./Menu";
 import { Icons } from "./Icons";
+const None = () => <></>;
 const Cards = ({ cardsData, selectedItem }) => {
   const Icon = Icons[`${selectedItem}`];
   return (
     <div className="cards">
       {cardsData.map((ele, i) => {
+        if (i >= 6) return <None key={i}></None>;
         return (
           <div className="card" key={i}>
             <img
