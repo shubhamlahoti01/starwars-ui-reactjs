@@ -1,0 +1,124 @@
+.sidebar {
+  height: 100%;
+  color: white;
+  width: 20%;
+  position: relative;
+  z-index: 1;
+
+  .main-item-div {
+    padding: 5px 10px 0px 15px;
+    // height: 100%;
+    width: 100%;
+    // border: 1px solid red;
+    .outer-btn {
+      color: white;
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      // background-color: rgb(84, 84, 141);
+      // margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #4d5875;
+      }
+
+      .inner-btn {
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 10px;
+        }
+        h4 {
+          text-transform: capitalize;
+          font-weight: 400;
+        }
+      }
+    }
+    .active {
+      background-color: #e0218a;
+      &:hover {
+        background-color: #d84194;
+      }
+    }
+    .inner-data {
+      display: flex;
+      align-items: center;
+      margin: 5px 0 0 25px;
+      justify-content: space-between;
+      border-radius: 5px;
+      .inner-data-btn {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        svg {
+          margin-right: 5px;
+        }
+        h5 {
+          text-transform: capitalize;
+          font-weight: 400;
+          font-size: 13px;
+        }
+      }
+      padding-inline: 10px 5px;
+      svg {
+      }
+      &:hover {
+        background-color: #4d5875;
+      }
+    }
+  }
+  .sidebar-close {
+    display: none;
+  }
+}
+@media screen and (max-width: 1220px) {
+  .sidebar {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 980px) {
+  .sidebar {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .sidebar {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: left 0.3s ease-in-out;
+    background-color: black;
+    padding-top: 3rem;
+    overflow: hidden;
+
+    &.showSidebarModal {
+      left: 0;
+    }
+
+    .sidebar-close {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      cursor: pointer;
+      color: white;
+    }
+
+    &.showSidebarModal .sidebar-close {
+      display: block;
+    }
+  }
+}
