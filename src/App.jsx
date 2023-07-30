@@ -131,7 +131,7 @@ const App = () => {
       getCardsData();
       setTimeout(() => {
         setLoading(false);
-      }, 500);
+      }, 600);
     } else {
       setCardsData([]);
       setLoading(false);

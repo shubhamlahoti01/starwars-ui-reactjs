@@ -11,11 +11,9 @@ import {
 import { GoShareAndroid } from "react-icons/go";
 import { RiDeleteBinLine } from "react-icons/ri";
 import DeleteModal from "./DeleteModal";
-import ViewModal from "./ViewModal";
 import { useData } from "./DataContext";
-import { useNavigate } from "react-router-dom";
 
-const Menu = ({ cardsData, i, selectedItem }) => {
+const Menu = ({ i }) => {
   const [openMenu, setOpenMenu] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
   // const [showView, setShowView] = useState(false);
@@ -89,7 +87,7 @@ const Menu = ({ cardsData, i, selectedItem }) => {
           </li>
         </div>
       </button>
-      {showDelete && <DeleteModal setShowDelete={setShowDelete} />}
+      {showDelete && <DeleteModal i={i} setShowDelete={setShowDelete} />}
       {/* {showView && (
         <ViewModal
           setShowView={setShowView}

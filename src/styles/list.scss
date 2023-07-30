@@ -43,8 +43,54 @@
   border-bottom: none;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .table-container {
     grid-template-columns: 1fr;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px 5px;
+  }
+
+  .data-table th,
+  .data-table td {
+    font-size: 14px;
+  }
+
+  .data-table tr {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .data-table th,
+  .data-table td {
+    padding: 6px 4px;
+  }
+
+  .data-table th,
+  .data-table td {
+    font-size: 12px;
+  }
+
+  .data-table tr {
+    margin-bottom: 6px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .data-table th,
+  .data-table td {
+    padding: 4px 3px;
+  }
+
+  .data-table th,
+  .data-table td {
+    font-size: 10px;
+  }
+
+  .data-table tr {
+    margin-bottom: 4px;
   }
 }
